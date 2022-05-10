@@ -39,24 +39,16 @@ keymap("n", "<S-Down>", ":resize +2<CR>", opts)
 keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
--- No highlight
-keymap("n", "<Leader><space>", ":nohlsearch<CR>", opts)
-
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jj", "<ESC>", opts)
 
 -- BufferLine Plugin --
-keymap('n', '<Leader>1', ':BufferLineGoToBuffer 1<CR>', opts)
-keymap('n', '<Leader>2', ':BufferLineGoToBuffer 2<CR>', opts)
-keymap('n', '<Leader>3', ':BufferLineGoToBuffer 3<CR>', opts)
-keymap('n', '<Leader>4', ':BufferLineGoToBuffer 4<CR>', opts)
-keymap('n', '<Leader>5', ':BufferLineGoToBuffer 5<CR>', opts)
-keymap('n', '<Leader>6', ':BufferLineGoToBuffer 6<CR>', opts)
-keymap('n', '<Leader>7', ':BufferLineGoToBuffer 7<CR>', opts)
-keymap('n', '<Leader>8', ':BufferLineGoToBuffer 8<CR>', opts)
-keymap('n', '<Leader>9', ':BufferLineGoToBuffer 9<CR>', opts)
-
-
+keymap('n', '<C-1>', ':BufferLineGoToBuffer 1<CR>', opts)
+keymap('n', '<C-2>', ':BufferLineGoToBuffer 2<CR>', opts)
+keymap('n', '<C-3>', ':BufferLineGoToBuffer 3<CR>', opts)
+keymap('n', '<C-4>', ':BufferLineGoToBuffer 4<CR>', opts)
+keymap('n', '<C-5>', ':BufferLineGoToBuffer 5<CR>', opts)
 keymap('n', ']b', ':BufferLineCycleNext<CR>', opts)
 keymap('n', '[b', ':BufferLineCyclePre<CR>', opts)
+

@@ -44,11 +44,6 @@ keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 keymap("i", "jj", "<ESC>", opts)
 
 -- BufferLine Plugin --
-keymap('n', '<C-1>', ':BufferLineGoToBuffer 1<CR>', opts)
-keymap('n', '<C-2>', ':BufferLineGoToBuffer 2<CR>', opts)
-keymap('n', '<C-3>', ':BufferLineGoToBuffer 3<CR>', opts)
-keymap('n', '<C-4>', ':BufferLineGoToBuffer 4<CR>', opts)
-keymap('n', '<C-5>', ':BufferLineGoToBuffer 5<CR>', opts)
 keymap('n', ']b', ':BufferLineCycleNext<CR>', opts)
 keymap('n', '[b', ':BufferLineCyclePre<CR>', opts)
 

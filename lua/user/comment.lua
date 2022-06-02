@@ -61,7 +61,7 @@ comment.setup {
             ---Add comment on the line below
             below = 'gco',
             ---Add comment at the end of line
-            eol = 'gcA',
+            eol = 'gcA', 
         },
 
         ---Create basic (operator-pending) and extended mappings for NORMAL + VISUAL mode

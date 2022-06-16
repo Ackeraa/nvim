@@ -98,8 +98,8 @@ local mappings = {
   ["1"] = { "<cmd> :ToggleTerm<CR>", "Terminal"},
   ["2"] = { "<cmd> lua _PYTHON_TOGGLE()<CR>", "Python"},
   ["3"] = { "<cmd> lua _JULIA_TOGGLE()<CR>", "Julia"},
-  ["v"] = { "<cmd> e ~/.config/nvim/init.lua<CR>", "Edit neovim config"},
-  ["z"] = { "<cmd> vsp ~/.zshrc<CR>", "Edit zsh config"},
+  ["v"] = { "<cmd> e ~/.config/nvim/init.lua | NvimTreeToggle <CR>", "Edit neovim config"},
+  ["z"] = { "<cmd> e ~/.zshrc<CR>", "Edit zsh config"},
 
   p = {
     name = "Packer",

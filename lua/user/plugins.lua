@@ -97,6 +97,9 @@ return packer.startup(function(use)
   -- Last Place
   use 'ethanholz/nvim-lastplace'
 
+  -- Vim Games
+  use 'ThePrimeagen/vim-be-good'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

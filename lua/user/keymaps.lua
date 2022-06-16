@@ -47,3 +47,18 @@ keymap("i", "jj", "<ESC>", opts)
 keymap('n', ']b', ':BufferLineCycleNext<CR>', opts)
 keymap('n', '[b', ':BufferLineCyclePre<CR>', opts)
 
+
+-- Unmap Arrows --
+keymap("n", "<up>", "<nop>", opts)
+keymap("n", "<down>", "<nop>", opts)
+keymap("n", "<left>", "<nop>", opts)
+keymap("n", "<right>", "<nop>", opts)
+keymap("i", "<up>", "<nop>", opts)
+keymap("i", "<down>", "<nop>", opts)
+keymap("i", "<left>", "<nop>", opts)
+keymap("i", "<right>", "<nop>", opts)
+
+
+-- Unmap Backspace--
+keymap("i", "<BS>", "<Nop>", opts)
+

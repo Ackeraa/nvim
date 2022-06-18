@@ -40,9 +40,8 @@ keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
 -- Insert --
--- Press jk fast to enter
+-- Press jj fast to enter
 keymap("i", "jj", "<ESC>", opts)
-
 -- BufferLine Plugin --
 keymap('n', ']b', ':BufferLineCycleNext<CR>', opts)
 keymap('n', '[b', ':BufferLineCyclePre<CR>', opts)
@@ -57,8 +56,4 @@ keymap("i", "<up>", "<nop>", opts)
 keymap("i", "<down>", "<nop>", opts)
 keymap("i", "<left>", "<nop>", opts)
 keymap("i", "<right>", "<nop>", opts)
-
-
--- Unmap Backspace--
-keymap("i", "<BS>", "<Nop>", opts)
 

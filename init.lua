@@ -21,4 +21,3 @@ require "user.whichkey"
 require "user.autocommands"
 require "user.nvim-lastplace"
 require "user.autosave"
-require 'user.vimbegood'

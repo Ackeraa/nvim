@@ -99,6 +99,7 @@ return packer.startup(function(use)
 
   -- Vim Games
   use 'ThePrimeagen/vim-be-good'
+  use '~/MyProgram/Lua/master-vim.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

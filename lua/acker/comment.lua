@@ -37,7 +37,7 @@ comment.setup {
 
         ---LHS of toggle mappings in NORMAL + VISUAL mode
         ---@type table
-        toggler = {
+         toggler = {
             ---Line-comment toggle keymap
             line = 'gcc',
             ---Block-comment toggle keymap

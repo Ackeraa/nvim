@@ -101,8 +101,7 @@ return packer.startup(function(use)
   use 'ethanholz/nvim-lastplace'
 
   -- Vim Games
-  use 'ThePrimeagen/vim-be-good'
-  use '~/MyProgram/Lua/master-vim.nvim'
+  -- use '~/MyProgram/Lua/master-vim.nvim'
 
   -- Copilot
   use "github/copilot.vim"

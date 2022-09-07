@@ -48,10 +48,6 @@ keymap("n", "<leader><space>", "<cmd>nohlsearch<CR>", opts)
 keymap("i", "jj", "<ESC>", opts)
 
 -- Unmap Arrows
-keymap("i", "<Up>", "<Nop>", opts)
-keymap("i", "<Down>", "<Nop>", opts)
-keymap("i", "<Left>", "<Nop>", opts)
-keymap("i", "<Right>", "<Nop>", opts)
 keymap("n", "<Up>", "<Nop>", opts)
 keymap("n", "<Down>", "<Nop>", opts)
 keymap("n", "<Left>", "<Nop>", opts)
@@ -59,7 +55,21 @@ keymap("n", "<Right>", "<Nop>", opts)
 
 -- Close buffers
 keymap("n", "<leader>q", "<cmd>q!<CR>", opts)
-keymap("n", "<leader>q", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<leader>d", "<cmd>Bdelete!<CR>", opts)
+
+-- Reload files
+keymap("n", "<leader>r", "<cmd>:lua R()<CR>", opts)
+
+-- Forward Delete
+keymap("i", "<C-l>", "<Del>", opts)
+
+-- Last pasted indent
+keymap("n", "<leader>[", "`[V`]<", opts)
+keymap("n", "<leader>]", "`[V`]>", opts)
+
+-- Insert a new line withlout leaving normal mode
+keymap("n", "<leader>o", "o<Esc>", opts)
+keymap("n", "<leader>O", "O<Esc>", opts)
 ----------------------------------------------------------------------------------------------------
 
 
@@ -96,6 +106,7 @@ keymap("n", "<leader>s", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
 keymap("n", "<leader>S", "<cmd>Telescope live_grep theme=ivy<CR>", opts)
 keymap("n", "<leader>p", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", opts)
 keymap("n", "<leader>v", "<cmd> Telescope find_files cwd=~/.config/nvim<CR>", opts)
+keymap("n", "<leader>c", "<cmd> Telescope treesitter<CR>", opts)
 keymap("n", "<leader>k", "<cmd>Telescope keymaps<CR>", opts)
 keymap("n", "<leader>5", "<cmd>Telescope git_branches<CR>", opts)
 keymap("n", "<leader>6", "<cmd>Telescope git_commits<CR>", opts)
@@ -113,3 +124,9 @@ keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 keymap("n", "==", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 -------------------------------------------------------------------------------------------------j--
+
+vim.g['copilot_no_tab_map'] = true
+vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
+keymap("n", "<leader>t", "<cmd>Todo<CR>", opts)
+
+keymap("n", "<leader>0", "<Plug>PlenaryTestFile", opts)

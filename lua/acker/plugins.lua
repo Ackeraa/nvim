@@ -89,8 +89,8 @@ return packer.startup(function(use)
 
   -- Treesitter
   use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
@@ -104,9 +104,15 @@ return packer.startup(function(use)
   use 'ThePrimeagen/vim-be-good'
   use '~/MyProgram/Lua/master-vim.nvim'
 
+  -- Copilot
+  use "github/copilot.vim"
+
+  use '~/MyProgram/Lua/todo.nvim'
+  --use 'ackeraa/todo.nvim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
-    require("packer").sync()
+      require("packer").sync()
   end
 end)

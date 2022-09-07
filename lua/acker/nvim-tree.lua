@@ -11,3 +11,5 @@ if not config_status_ok then
     return
 end
 
+nvim_tree.setup()
+

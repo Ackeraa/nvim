@@ -128,5 +128,6 @@ keymap("n", "==", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 vim.g['copilot_no_tab_map'] = true
 vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
 keymap("n", "<leader>t", "<cmd>Todo<CR>", opts)
+keymap("n", "<leader>m", "<cmd>MasterVim<CR>", opts)
 
 keymap("n", "<leader>0", "<Plug>PlenaryTestFile", opts)

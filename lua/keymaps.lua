@@ -1,10 +1,7 @@
 local opts = { noremap = true, silent = true }
 
-
--- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---Remap space as leader key
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
@@ -123,7 +120,7 @@ keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 keymap("n", "==", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
--------------------------------------------------------------------------------------------------j--
+----------------------------------------------------------------------------------------------------
 
 vim.g['copilot_no_tab_map'] = true
 vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', {expr=true, silent=true})

@@ -17,10 +17,10 @@ lsp_installer.setup {
 
 for _, server in pairs(servers) do
 	local opts = {
-		on_attach = require("acker.lsp.handlers").on_attach,
-		capabilities = require("acker.lsp.handlers").capabilities,
+		on_attach = require("Lsp.handlers").on_attach,
+		capabilities = require("Lsp.handlers").capabilities,
 	}
-	local has_custom_opts, server_custom_opts = pcall(require, "acker.lsp.settings." .. server)
+	local has_custom_opts, server_custom_opts = pcall(require, "Lsp.settings." .. server)
 	if has_custom_opts then
 	 	opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
 	end

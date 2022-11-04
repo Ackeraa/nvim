@@ -35,6 +35,7 @@ return packer.startup(function(use)
     use "ahmedkhalf/project.nvim"
     use "akinsho/toggleterm.nvim"
     use "antoinemadec/FixCursorHold.nvim" -- this is needed to fix lsp doc highlight
+    use "chentoast/marks.nvim"
     use "folke/which-key.nvim"
     use "github/copilot.vim"
     use "goolord/alpha-nvim"

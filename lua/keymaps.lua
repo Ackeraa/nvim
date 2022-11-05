@@ -116,9 +116,9 @@ keymap("n", "<leader>6", "<cmd>Telescope git_commits<CR>", opts)
 -- LSP --
 ----------------------------------------------------------------------------------------------------
 keymap("n", "<leader>.", "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", opts)
-keymap('n', "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-keymap('n', "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-keymap('n', "<leader>l", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+keymap("n", "<leader>l", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 keymap("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
@@ -129,8 +129,17 @@ keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 keymap("n", "==", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 ----------------------------------------------------------------------------------------------------
 
-vim.g['copilot_no_tab_map'] = true
-vim.api.nvim_set_keymap('i', '<C-j>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
+-- Copilot --
+----------------------------------------------------------------------------------------------------
+vim.g["copilot_no_tab_map"] = true
+keymap("i", "<C-j>", "copilot#Accept('<CR>')", opts)
+----------------------------------------------------------------------------------------------------
+
+-- Goyo --
+----------------------------------------------------------------------------------------------------
+keymap("n", "<leader>g", "<cmd>Goyo<CR>", opts)
+----------------------------------------------------------------------------------------------------
+
 keymap("n", "<leader>t", "<cmd>Todo<CR>", opts)
 keymap("n", "<leader>m", "<cmd>MasterVim<CR>", opts)
 

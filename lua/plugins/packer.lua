@@ -64,6 +64,7 @@ return packer.startup(function(use)
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
     use {"akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons"}
     use {"tzachar/cmp-tabnine", run="./install.sh", requires = "hrsh7th/nvim-cmp"}
+    use "junegunn/goyo.vim"
 
     -- Automatically set up configuration after cloning packer.nvim
     if PACKER_BOOTSTRAP then

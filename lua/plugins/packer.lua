@@ -53,7 +53,6 @@ return packer.startup(function(use)
     use "moll/vim-bbye" -- delete buffer
     use "navarasu/onedark.nvim"  -- colorschemes
     use "neovim/nvim-lspconfig" -- enable LSP
-    use "numToStr/Comment.nvim" -- easily comment stuff
     use "nvim-lua/plenary.nvim" -- useful lua functions used ny lots of plugins
     use "nvim-lua/popup.nvim" -- an implementation of the Popup API from vim in Neovim
     use "nvim-lualine/lualine.nvim"
@@ -61,10 +60,10 @@ return packer.startup(function(use)
     use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
     use "wbthomason/packer.nvim" -- have packer manage itself
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-    use 'ethanholz/nvim-lastplace'
+    use "ethanholz/nvim-lastplace"
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}
-    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+    use {"akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons"}
+    use {"tzachar/cmp-tabnine", run="./install.sh", requires = "hrsh7th/nvim-cmp"}
 
     -- Automatically set up configuration after cloning packer.nvim
     if PACKER_BOOTSTRAP then

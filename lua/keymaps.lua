@@ -52,6 +52,7 @@ keymap("n", "<Right>", "<Nop>", opts)
 
 -- Close buffers
 keymap("n", "<leader>q", "<cmd>q!<CR>", opts)
+keymap("n", "<leader>Q", "<cmd>qa!<CR>", opts)
 keymap("n", "<leader>d", "<cmd>Bdelete!<CR>", opts)
 
 -- Reload files
@@ -69,6 +70,11 @@ keymap("n", "<leader>o", "o<Esc>", opts)
 keymap("n", "<leader>O", "O<Esc>", opts)
 ----------------------------------------------------------------------------------------------------
 
+
+-- Packer --
+----------------------------------------------------------------------------------------------------
+keymap('n', '<leader>;', '<cmd>source % | PackerSync<CR>', opts)
+----------------------------------------------------------------------------------------------------
 
 -- BufferLine Plugin --
 ----------------------------------------------------------------------------------------------------
@@ -94,7 +100,6 @@ keymap("n", "<leader>4", "<cmd> lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Telescope --
 ----------------------------------------------------------------------------------------------------
-keymap("n", "gl", "<cmd>Telescope diagnostics<CR>", opts)
 keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers("..
              "require('telescope.themes').get_dropdown{previewer = false})<CR>", opts)
 keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').find_files("..
@@ -102,8 +107,6 @@ keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').find_files("..
 keymap("n", "<leader>s", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
 keymap("n", "<leader>S", "<cmd>Telescope live_grep theme=ivy<CR>", opts)
 keymap("n", "<leader>p", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", opts)
-keymap("n", "<leader>v", "<cmd> Telescope find_files cwd=~/.config/nvim<CR>", opts)
-keymap("n", "<leader>c", "<cmd> Telescope treesitter<CR>", opts)
 keymap("n", "<leader>k", "<cmd>Telescope keymaps<CR>", opts)
 keymap("n", "<leader>5", "<cmd>Telescope git_branches<CR>", opts)
 keymap("n", "<leader>6", "<cmd>Telescope git_commits<CR>", opts)
@@ -112,6 +115,10 @@ keymap("n", "<leader>6", "<cmd>Telescope git_commits<CR>", opts)
 
 -- LSP --
 ----------------------------------------------------------------------------------------------------
+keymap("n", "<leader>.", "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", opts)
+keymap('n', "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+keymap('n', "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+keymap('n', "<leader>l", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 keymap("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)

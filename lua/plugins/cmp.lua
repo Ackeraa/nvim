@@ -42,8 +42,9 @@ cmp.setup {
             -- Kind icons
             vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
             vim_item.menu = ({
-                cmp_tabnine = "[Tabnine]",
+                copilot = "[Copilot]",
                 nvim_lsp = "[LSP]",
+                cmp_tabnine = "[Tabnine]",
                 buffer = "[Buffer]",
                 path = "[Path]",
             })[entry.source.name]
@@ -51,8 +52,9 @@ cmp.setup {
         end,
     },
     sources = {
-        { name = "cmp_tabnine" },
+        { name = "copilot" },
         { name = "nvim_lsp" },
+        { name = "cmp_tabnine" },
         { name = "buffer" },
         { name = "path" },
     },

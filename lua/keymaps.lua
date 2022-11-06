@@ -131,8 +131,8 @@ keymap("n", "==", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
 -- Copilot --
 ----------------------------------------------------------------------------------------------------
-vim.g["copilot_no_tab_map"] = true
-keymap("i", "<C-j>", "copilot#Accept('<CR>')", opts)
+-- vim.g["copilot_no_tab_map"] = true
+-- keymap("i", "<C-n>", "copilot#Accept('<CR>')", opts)
 ----------------------------------------------------------------------------------------------------
 
 -- Goyo --

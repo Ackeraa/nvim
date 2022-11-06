@@ -9,6 +9,7 @@ local servers = {
     "jsonls",
     "sumneko_lua",
     "pyright",
+    "clangd",
 }
 
 lsp_installer.setup {

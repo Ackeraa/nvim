@@ -5,6 +5,8 @@ end
 
 configs.setup {
   sync_install = false,
+  auto_install = true,
+  ensure_installed = { "cpp", "lua", "python" },
   ignore_install = { "" },
   autopairs = {
     enable = false,

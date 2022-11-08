@@ -34,9 +34,6 @@ return packer.startup(function(use)
   use "Pocco81/auto-save.nvim"
   use "ahmedkhalf/project.nvim"
   use "akinsho/toggleterm.nvim"
-  use "antoinemadec/FixCursorHold.nvim" -- this is needed to fix lsp doc highlight
-  use "chentoast/marks.nvim"
-  use "folke/which-key.nvim"
   use "github/copilot.vim"
   use "goolord/alpha-nvim"
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -44,7 +41,6 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/nvim-cmp" -- fhe completion plugin
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
   use "lewis6991/gitsigns.nvim"
@@ -57,7 +53,6 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- an implementation of the Popup API from vim in Neovim
   use "nvim-lualine/lualine.nvim"
   use "nvim-telescope/telescope.nvim"
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "wbthomason/packer.nvim" -- have packer manage itself
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "ethanholz/nvim-lastplace"
@@ -65,6 +60,7 @@ return packer.startup(function(use)
   use { "akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons" }
   --use { "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }
   use "junegunn/goyo.vim"
+  use { "glepnir/lspsaga.nvim", branch = "main" }
 
   -- Automatically set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then

@@ -1,6 +1,6 @@
 local opts = { noremap = true, silent = true }
 
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
@@ -55,9 +55,6 @@ keymap("n", "<leader>q", "<cmd>q!<CR>", opts)
 keymap("n", "<leader>Q", "<cmd>qa!<CR>", opts)
 keymap("n", "<leader>d", "<cmd>Bdelete!<CR>", opts)
 
--- Reload files
-keymap("n", "<leader>r", "<cmd>:lua R()<CR>", opts)
-
 -- Forward Delete
 keymap("i", "<C-l>", "<Del>", opts)
 
@@ -73,7 +70,7 @@ keymap("n", "<leader>O", "O<Esc>", opts)
 
 -- Packer --
 ----------------------------------------------------------------------------------------------------
-keymap('n', '<leader>;', '<cmd>source % | PackerSync<CR>', opts)
+keymap('n', '<leader>\\', '<cmd>source % | PackerSync<CR>', opts)
 ----------------------------------------------------------------------------------------------------
 
 -- BufferLine Plugin --
@@ -104,6 +101,7 @@ keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers("..
              "require('telescope.themes').get_dropdown{previewer = false})<CR>", opts)
 keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').find_files("..
              "require('telescope.themes').get_dropdown{previewer = false})<CR>", opts)
+keymap("n", "<leader>m", "<cmd>Telescope lsp_document_symbols<CR>", opts)
 keymap("n", "<leader>s", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
 keymap("n", "<leader>S", "<cmd>Telescope live_grep theme=ivy<CR>", opts)
 keymap("n", "<leader>p", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", opts)
@@ -115,18 +113,15 @@ keymap("n", "<leader>6", "<cmd>Telescope git_commits<CR>", opts)
 
 -- LSP --
 ----------------------------------------------------------------------------------------------------
-keymap("n", "<leader>.", "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", opts)
-keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-keymap("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-keymap("n", "<leader>l", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-keymap("n", "<leader>/", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-keymap("n", "==", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+keymap("n", "==", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
+keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+keymap("n", "gj", "<cmd>Lspsaga lsp_finder<CR>", opts)
+keymap("n", "gk", "<cmd>Lspsaga peek_definition<CR>", opts)
+keymap("n", "<leader>r", "<cmd>Lspsaga rename<CR>", opts)
+keymap("n", "<leader>l", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
+keymap({"n","v"}, "<leader>.", "<cmd>Lspsaga code_action<CR>", opts)
+keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 ----------------------------------------------------------------------------------------------------
 
 -- Copilot --
@@ -141,6 +136,5 @@ keymap("n", "<leader>g", "<cmd>Goyo<CR>", opts)
 ----------------------------------------------------------------------------------------------------
 
 keymap("n", "<leader>t", "<cmd>Todo<CR>", opts)
-keymap("n", "<leader>m", "<cmd>MasterVim<CR>", opts)
 
 keymap("n", "<leader>0", "<Plug>PlenaryTestFile", opts)

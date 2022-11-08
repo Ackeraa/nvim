@@ -44,7 +44,7 @@ cmp.setup {
             vim_item.menu = ({
                 copilot = "[Copilot]",
                 nvim_lsp = "[LSP]",
-                cmp_tabnine = "[Tabnine]",
+                --cmp_tabnine = "[Tabnine]",
                 buffer = "[Buffer]",
                 path = "[Path]",
             })[entry.source.name]
@@ -54,7 +54,7 @@ cmp.setup {
     sources = {
         { name = "copilot" },
         { name = "nvim_lsp" },
-        { name = "cmp_tabnine" },
+        --{ name = "cmp_tabnine" },
         { name = "buffer" },
         { name = "path" },
     },

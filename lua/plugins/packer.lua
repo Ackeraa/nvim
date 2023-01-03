@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "lewis6991/gitsigns.nvim"
   use "lewis6991/impatient.nvim"
-  use "lukas-reineke/indent-blankline.nvim"
+  --use "lukas-reineke/indent-blankline.nvim"
   use "moll/vim-bbye" -- delete buffer
   use "navarasu/onedark.nvim" -- colorschemes
   use "neovim/nvim-lspconfig" -- enable LSP

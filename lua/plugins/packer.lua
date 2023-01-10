@@ -45,7 +45,6 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "lewis6991/gitsigns.nvim"
   use "lewis6991/impatient.nvim"
-  --use "lukas-reineke/indent-blankline.nvim"
   use "moll/vim-bbye" -- delete buffer
   use "navarasu/onedark.nvim" -- colorschemes
   use "neovim/nvim-lspconfig" -- enable LSP
@@ -58,9 +57,9 @@ return packer.startup(function(use)
   use "ethanholz/nvim-lastplace"
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
   use { "akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons" }
-  --use { "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }
   use "junegunn/goyo.vim"
   use { "glepnir/lspsaga.nvim", branch = "main" }
+  use { "Ackeraa/todo.nvim" }
 
   -- Automatically set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then

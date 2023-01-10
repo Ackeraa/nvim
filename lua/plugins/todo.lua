@@ -5,7 +5,7 @@ end
 
 todo.setup {
   opts = {
-    file_path = "/Users/gsx/todo.txt",
+    --file_path = "/Users/acker/todo.txt",
     upload_to_reminder = true,
   },
 }

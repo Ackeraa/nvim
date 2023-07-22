@@ -83,6 +83,8 @@ keymap('n', '[b', '<cmd>BufferLineCyclePre<CR>', opts)
 -- NvimTreeToggle --
 ----------------------------------------------------------------------------------------------------
 keymap("n", "<leader><leader>", "<cmd>NvimTreeToggle<CR>", opts)
+
+
 ----------------------------------------------------------------------------------------------------
 
 
@@ -113,7 +115,7 @@ keymap("n", "<leader>6", "<cmd>Telescope git_commits<CR>", opts)
 
 -- LSP --
 ----------------------------------------------------------------------------------------------------
-keymap("n", "==", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
+keymap("n", "==", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", opts)
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 keymap("n", "gj", "<cmd>Lspsaga lsp_finder<CR>", opts)
 keymap("n", "gk", "<cmd>Lspsaga peek_definition<CR>", opts)
@@ -130,7 +132,7 @@ keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 -- keymap("i", "<C-n>", "copilot#Accept('<CR>')", opts)
 ----------------------------------------------------------------------------------------------------
 
--- Goyo --
+-- Goyosds --
 ----------------------------------------------------------------------------------------------------
 keymap("n", "<leader>g", "<cmd>Goyo<CR>", opts)
 ----------------------------------------------------------------------------------------------------

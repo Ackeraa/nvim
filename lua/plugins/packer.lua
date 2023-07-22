@@ -58,7 +58,7 @@ return packer.startup(function(use)
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
   use { "akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons" }
   use "junegunn/goyo.vim"
-  use { "glepnir/lspsaga.nvim", branch = "main" }
+  use { "nvimdev/lspsaga.nvim" }
   use { "Ackeraa/todo.nvim" }
 
   -- Automatically set up configuration after cloning packer.nvim

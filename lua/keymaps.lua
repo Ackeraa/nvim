@@ -100,9 +100,9 @@ keymap("n", "<leader>4", "<cmd> lua _LAZYGIT_TOGGLE()<CR>", opts)
 -- Telescope --
 ----------------------------------------------------------------------------------------------------
 keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers("..
-             "require('telescope.themes').get_dropdown{previewer = false})<CR>", opts)
+       "require('telescope.themes').get_dropdown{previewer = false})<CR>", opts)
 keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').find_files("..
-             "require('telescope.themes').get_dropdown{previewer = false})<CR>", opts)
+       "require('telescope.themes').get_dropdown{previewer = false})<CR>", opts)
 keymap("n", "<leader>m", "<cmd>Telescope lsp_document_symbols<CR>", opts)
 keymap("n", "<leader>s", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
 keymap("n", "<leader>S", "<cmd>Telescope live_grep theme=ivy<CR>", opts)
@@ -115,9 +115,9 @@ keymap("n", "<leader>6", "<cmd>Telescope git_commits<CR>", opts)
 
 -- LSP --
 ----------------------------------------------------------------------------------------------------
-keymap("n", "==", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", opts)
+--keymap("n", "==", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", opts)
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
-keymap("n", "gj", "<cmd>Lspsaga lsp_finder<CR>", opts)
+keymap("n", "gj", "<cmd>Lspsaga finder<CR>", opts)
 keymap("n", "gk", "<cmd>Lspsaga peek_definition<CR>", opts)
 keymap("n", "<leader>r", "<cmd>Lspsaga rename<CR>", opts)
 keymap("n", "<leader>l", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
@@ -125,6 +125,10 @@ keymap({"n","v"}, "<leader>.", "<cmd>Lspsaga code_action<CR>", opts)
 keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 ----------------------------------------------------------------------------------------------------
+
+-- Prettier --
+----------------------------------------------------------------------------------------------------
+keymap("n", "==", "<cmd>Prettier<CR>", opts)
 
 -- Copilot --
 ----------------------------------------------------------------------------------------------------

@@ -8,6 +8,7 @@ local lspconfig = require("lspconfig")
 local servers = {
   "pyright",
   "clangd",
+  "tsserver"
 }
 
 lsp_installer.setup {

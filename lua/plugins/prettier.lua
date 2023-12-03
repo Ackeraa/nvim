@@ -19,7 +19,6 @@ prettier.setup({
     "typescriptreact",
     "yaml",
     "python",
-    "ruby"
   },
   cli_options = {
     arrow_parens = "always",

@@ -6,9 +6,8 @@ end
 local lspconfig = require("lspconfig")
 
 local servers = {
-  "pyright",
   "clangd",
-  "tsserver"
+  "tsserver",
 }
 
 lsp_installer.setup {
@@ -67,3 +66,5 @@ for _, server in pairs(servers) do
   lspconfig[server].setup(opts)
   lspconfig.clangd.setup({ capabilities = capabilities })
 end
+
+vim.opt.signcolumn = "yes"

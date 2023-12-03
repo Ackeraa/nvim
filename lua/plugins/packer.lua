@@ -61,6 +61,8 @@ return packer.startup(function(use)
   use "nvimdev/lspsaga.nvim" 
   use "jose-elias-alvarez/null-ls.nvim"
   use "MunifTanjim/prettier.nvim"
+  use "chentoast/marks.nvim"
+  use "stevearc/aerial.nvim"
   use { "Ackeraa/todo.nvim" }
 
   -- Automatically set up configuration after cloning packer.nvim
